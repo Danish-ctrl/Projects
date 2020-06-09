@@ -1,0 +1,117 @@
+import random
+print('Welcome To The Snake-Water-Gun Game')
+n=5
+i=1
+Your_pt=0
+Comp_pt=0
+Draw=0
+for i in range(1,n+1):
+
+    l=['S','W','G']
+    x=random.choice(l)
+
+
+    z=input('Plz enter\n1 For Snake \n2 For Gun\n3 For Water\n')
+
+
+
+    if(z=='s' or z=='S' or z=='1'):
+        if(x=='S'):
+            print("############")
+            print('Draw !')
+            Draw=Draw+1
+            print('Draw is :',Draw)
+            print('You are left with ',n-i,' chances')
+            print("############")
+
+        elif(x=='G'):
+            print("############")
+            print('You Won !')
+            Your_pt=Your_pt+1
+            print('Your Point is :',Your_pt)
+            print('Computer Point is :', Comp_pt)
+            print('You are left with ',n-i,' chances')
+            print("############")
+
+        else:
+            print("############")
+            print('Computer Won !')
+            Comp_pt=Comp_pt+1
+            print('Computer Point is :',Comp_pt)
+            print('Your Point is :', Your_pt)
+            print('You are left with ',n-i,' chances')
+            print("############")
+
+    elif (z == 'W' or z == 'w' or z == '3'):
+        if (x == 'W'):
+            print("############")
+            print('Draw !')
+            Draw = Draw + 1
+            print('Draw is :', Draw)
+            print('You are left with ', n - i, ' chances')
+            print("############")
+
+        elif (x == 'G'):
+            print("############")
+            print('You Won !')
+            Your_pt = Your_pt + 1
+            print('Your Point is :', Your_pt)
+            print('Computer Point is :', Comp_pt)
+            print('You are left with ', n - i , ' chances')
+            print("############")
+
+        else:
+            print("############")
+            print('Computer Won !')
+            Comp_pt = Comp_pt + 1
+            print('Computer Point is :', Comp_pt)
+            print('Your Point is :', Your_pt)
+            print('You are left with ', n - i , ' chances')
+            print("############")
+
+    elif (z == 'g' or z == 'G' or z == '2'):
+        if (x == 'G'):
+            print("############")
+            print('Draw !')
+            Draw = Draw + 1
+            print('Draw is :', Draw)
+            print('You are left with ', n - i , ' chances')
+            print("############")
+
+
+        elif (x == 'W'):
+            print("############")
+            print('You Won !')
+            Your_pt = Your_pt + 1
+            print('Your Point is :', Your_pt)
+            print('Computer Point is :', Comp_pt)
+            print('You are left with ', n - i , ' chances')
+            print("############")
+
+        else:
+            print("############")
+            print('Computer Won !')
+            Comp_pt = Comp_pt + 1
+            print('Computer Point is :', Comp_pt)
+            print('Your Point is :', Your_pt)
+            print('You are left with ', n - i , ' chances')
+            print("############")
+
+
+    else:
+        print('Please enter proper option')
+
+print()
+print('*****RESULT*******')
+print('Computer Total Point is :',Comp_pt)
+print('Your Total Point is :', Your_pt)
+print('Total Draw is :', Draw)
+if(Comp_pt>Your_pt):
+    print('You Lost and Computer Won!  :(')
+elif(Comp_pt<Your_pt):
+    print('Congrats, You Won!  :))')
+else:
+    print('Match Drawn and Nobody won!!!')
+print('******************')
+
+
